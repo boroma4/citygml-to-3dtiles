@@ -44,7 +44,7 @@ class SRSTranslator {
     // Weird double swap hack, but works
     if (projectionFrom == "EPSG:3301"){
       coords = transformation.forward([coords[1], coords[0]]);
-      coords = [coords[1], coords[0]];
+      // coords = [coords[1], coords[0]];
     } else {
       coords = transformation.forward(coords);
     }
