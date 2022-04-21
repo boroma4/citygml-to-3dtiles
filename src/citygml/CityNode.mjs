@@ -140,7 +140,7 @@ class CityNode {
       point = point.map(p => parseFloat(p))
       point = point.map(p => isNaN(p) ? 0 : p)
       point = srsTranslator.forward(point, srs, 'WGS84')
-      point = Cesium.Cartesian3.fromDegrees(point[0], point[1], point[2])
+      point = Cesium.Cartesian3.fromDegrees(point[1], point[0], point[2])
       points.push(point)
     }
     return points
